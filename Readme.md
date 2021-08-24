@@ -15,10 +15,10 @@ Case with Logo
 ```
 # vim apps/block_scout_web/priv/gettext/en/LC_MESSAGES/default.po
 msgid "ETH"
-msgstr "XTH"
+msgstr "POA"
 
 msgid "Ether"
-msgstr "XTH" 
+msgstr "POA" 
 ```
 
 ## 3. Build blockscout
