@@ -3,12 +3,12 @@
 ## 1. Download blockscout
 > https://github.com/blockscout/blockscout/releases
 ```
-# wget https://github.com/blockscout/blockscout/archive/refs/tags/v3.7.2-beta.zip
-# unzip v3.7.2-beta.zip
+# wget https://github.com/blockscout/blockscout/archive/refs/tags/v4.1.3-beta.zip
+# unzip v4.1.3-beta.zip
 
 Case with Logo
 
-# cp logo.png blockscout-3.7.2-beta/apps/block_scout_web/assets/static/images/.
+# cp logo.png blockscout-4.1.3-beta/apps/block_scout_web/assets/static/images/.
 ```
 
 ## 2. Change Coin name
@@ -23,7 +23,7 @@ msgstr "POA"
 
 ## 3. Build blockscout
 ```
-# cd blockscout-3.7.2-beta/docker
+# cd blockscout-4.1.3-beta/docker
 # docker build --build-arg COIN="POA" -f ./Dockerfile -t blockscout_poa ../
 ```
 
@@ -51,7 +51,8 @@ Change environment
 
 ## 6. Start blockscout
 Change environment                             
-- DATABASE_URL=postgresql                      
+- DATABASE_URL=postgresql
+- ECTO_USE_SSL=false                      
 - NETWORK=POA                              
 - SUBNETWORK=Mainnet
 - CHAIN_ID=xx
