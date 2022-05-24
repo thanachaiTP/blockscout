@@ -1,9 +1,17 @@
 version: '3.8'
+x-logging:
+  &default-logging
+  options:
+    max-size: '1g'
+    max-file: '1'
+  driver: json-file
+  
 services:
   postgres:
     container_name: postgres
     image: postgres:13.2
     restart: always
+    logging: *default-logging
     environment:
       - TZ=Asia/Bangkok
       - POSTGRES_USER=postgres
@@ -19,6 +27,7 @@ services:
   migrations:
     container_name: blockscout-migrate
     image: blockscout_poa
+    logging: *default-logging
     environment:
       - TZ=Asia/Bangkok
       - MIX_ENV=prod
@@ -44,6 +53,7 @@ services:
     container_name: blockscout
     image: blockscout_poa
     restart: always
+    logging: *default-logging
     environment:
       - TZ=Asia/Bangkok
       - MIX_ENV=prod
