@@ -23,6 +23,7 @@ services:
       - TZ=Asia/Bangkok
       - MIX_ENV=prod
       - DATABASE_URL=postgresql://postgres:1234567890@postgres:5432/explorer?ssl=false
+      - ECTO_USE_SSL=false
       - NETWORK=POA
       - SUBNETWORK=Mainnet
       - ETHEREUM_JSONRPC_VARIANT=geth
@@ -33,8 +34,8 @@ services:
       - BLOCKSCOUT_HOST=exp.xyz.io
       - BLOCKSCOUT_PROTOCOL=https
       - PORT=4000
-#      - LOGO=/images/logo.png
-#      - LOGO_FOOTER=/images/logo.png
+      - LOGO=/images/blockscout_logo.svg
+      - LOGO_FOOTER=/images/blockscout_logo.svg
     ports:
       - 4000:4000
     command: sh -c "echo $$MIX_ENV && mix do ecto.create, ecto.migrate"
@@ -47,6 +48,7 @@ services:
       - TZ=Asia/Bangkok
       - MIX_ENV=prod
       - DATABASE_URL=postgresql://postgres:1234567890@postgres:5432/explorer?ssl=false
+      - ECTO_USE_SSL=false
       - CHAIN_ID=xx
       - ENABLE_SOURCIFY_INTEGRATION=true
       - NETWORK=POA
@@ -59,8 +61,8 @@ services:
       - BLOCKSCOUT_HOST=exp.xyz.io
       - BLOCKSCOUT_PROTOCOL=https
       - PORT=4000
-      - LOGO=/images/logo.png
-      - LOGO_FOOTER=/images/logo.png
+      - LOGO=/images/blockscout_logo.svg
+      - LOGO_FOOTER=/images/blockscout_logo.svg
       - LINK_TO_OTHER_EXPLORERS=false
       - SUPPORTED_CHAINS=[]
       - BLOCKSCOUT_VERSION=3.7.2-beta
@@ -70,5 +72,5 @@ services:
       - SHOW_PRICE_CHART=false
       - ENABLE_TXS_STATS=true
     ports:
-      - 127.0.0.1:4000:4000
+      - 4000:4000
     command: sh -c "mix phx.server"
