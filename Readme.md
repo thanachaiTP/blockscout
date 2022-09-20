@@ -60,7 +60,8 @@ Change environment
 - ETHEREUM_JSONRPC_WS_URL=ws://ws.xyz.io      
 - COIN=POA                                                  
 - LOGO=/images/logo.png                     
-- LOGO_FOOTER=/images/logo.png              
+- LOGO_FOOTER=/images/logo.png
+- SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9ppLR8MI4CpRz4/qLyEFs54ktJfaNT6Z221No # example -- generate a new secret_key_base run mix phx.gen.secret https://docs.blockscout.com/for-developers/manual-deployment#deployment-steps
 
 ```
 # docker-compose up -d blockscout
