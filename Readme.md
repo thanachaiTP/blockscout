@@ -76,3 +76,10 @@ Change environment
 @import "poa_variables";
 ```
 
+## 8. Export CSV setTimeout
+```
+# vim apps/block_scout_web/assets/js/lib/csv_download.js
+
+    const interval = setInterval(handleCSVDownloaded, 1000)
+    setTimeout(resetDownload, 60000)  // 1 min
+```
