@@ -61,7 +61,13 @@ Change environment
 - COIN=POA                                                  
 - LOGO=/images/logo.png                     
 - LOGO_FOOTER=/images/logo.png
-- SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9ppLR8MI4CpRz4/qLyEFs54ktJfaNT6Z221No # example -- generate a new secret_key_base run mix phx.gen.secret https://docs.blockscout.com/for-developers/manual-deployment#deployment-steps
+- SECRET_KEY_BASE=VTIB3uHDNbvrY0+60ZWgUoUBKDn9ppLR8MI4CpRz4/qLyEFs54ktJfaNT6Z221No # example -- generate a new secret_key_base run mix phx.gen.secret
+
+>https://docs.blockscout.com/for-developers/manual-deployment#deployment-steps
+
+```
+# gpg --gen-random 1 48 | base64
+```
 
 ```
 # docker-compose up -d blockscout
